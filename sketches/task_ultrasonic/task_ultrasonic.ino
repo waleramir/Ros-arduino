@@ -48,9 +48,9 @@ void usonic_transmit() {
 }
 
 std_msgs::Float32 float_msg;
-ros::Publisher kalman_pub("listener_1", &float_msg);
-ros::Publisher lowpass_pub("listener_2", &float_msg);
-ros::Publisher averg_pub("listener_3", &float_msg);
+ros::Publisher kalman_pub("filtering_1", &float_msg);
+ros::Publisher lowpass_pub("filtering_2", &float_msg);
+ros::Publisher averg_pub("filtering_3", &float_msg);
 
 void setup() {
   pinMode(trig, OUTPUT);
