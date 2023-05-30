@@ -1,0 +1,5 @@
+<launch>
+    <node name="sensor_log" pkg="arduino" type="sensor_log.py" output="screen"/>
+    <node name="sensor_log_mock" pkg="arduino" type="sensor_log_mock.py" output="screen"/>
+    <node name="log_plot" pkg="rqt_plot" type="rqt_plot" args="/sensor_log/sensor_1 /sensor_log/sensor_2"/>
+</launch>
