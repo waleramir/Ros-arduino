@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  rosbag
 )
 
 ## System dependencies are found with CMake's conventions
@@ -49,10 +50,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 # add_message_files(
 #   FILES
-#   Message1.msg
-#   Message2.msg
+#   SensorMessage.msg
 # )
-
 ## Generate services in the 'srv' folder
 # add_service_files(
 #   FILES
@@ -185,7 +184,9 @@ include_directories(
 #   PATTERN ".svn" EXCLUDE
 # )
 catkin_install_python(PROGRAMS
-  scripts/talker.py scripts/talker_2.py
+  scripts/talker.py 
+  scripts/talker_2.py
+  scripts/sensor_log.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES
