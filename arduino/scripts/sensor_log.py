@@ -5,7 +5,7 @@ from arduino.msg import SensorMessage
 import rosbag
 
 
-bag = rosbag.Bag('/home/linar/Desktop/test.bag', 'w')
+bag = rosbag.Bag('~/Desktop/test.bag', 'w')
 
 def callback(data):
     rospy.loginfo("Value: %f. Value: %f", data.sensor_1, data.sensor_2)
