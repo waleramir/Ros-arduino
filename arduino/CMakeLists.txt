@@ -189,6 +189,8 @@ catkin_install_python(PROGRAMS
   scripts/talker_2.py
   scripts/sensor_log.py
   scripts/sensor_log_mock.py
+  scripts/filtering_mock.py
+  scripts/filtering.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES
